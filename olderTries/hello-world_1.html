@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+
+<title>Hello...</title>
+<style type="text/css">
+#mainContent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	background-color: #E3F0FB;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="mainContent">
+	Minute Ventilation Fraction: 
+<label for=minuteVentilationFraction></label>
+<input type=range id=minuteVentilationFraction min=0.1 value=0.2 max=1 step=0.1><br>
+Cardiac Output Fraction: 
+<label for=cardiacOutputFraction></label>
+<input type=range id=cardiacOutputFraction min=0.1 value=0.5 max=1 step=0.1>
+<hr>
+<label id="result"></label>
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type = "text/javascript" src = "LookupTables.js"></script>
+<script type = "text/javascript" src = "CalculateLungSegmentOxygen.js"></script>
+</html>

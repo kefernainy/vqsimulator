@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+
+<title>VQ Simulator</title>
+<style type="text/css">
+
+
+#container {
+        margin:auto;
+
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #000;
+    overflow:hidden;
+}
+
+#container div {
+        margin:auto;
+
+    position: absolute;
+    bottom: 0;
+}
+
+#mainSaturation, #extraSaturation {
+	float:right;
+	font-size:30px;
+	font-weight:bold;
+	margin:5px;
+}
+
+#controlPanel {
+        margin:auto;
+
+    position: relative;
+    width: 400px;
+    overflow:hidden;
+}
+
+#debug{
+        margin:auto;
+text-align:center;
+    width:400px;
+    font-size:25px;
+    font-weight:bold;
+    
+}
+
+#instructions{
+    margin:auto;
+    max-width:550px;
+}
+
+#legend{
+    width:400px;
+    margin:auto;
+}
+
+.legendblock {
+    width: 10px;
+    height:10px;
+    border:1px black solid;
+    float:left;
+    margin:2px;
+}
+
+#legendVt{
+    background-color: Red;
+}
+
+#legendCO{
+    background-color: Blue;
+}
+
+#legendVQ{
+    background-color: Black;
+}
+
+</style>
+</head>
+
+<body>
+<div id="container"></div>
+<div id="debug">Cooking...</div>
+<div id="controlPanel">
+    <fieldset>
+        <legend>Main Segments</legend>
+    Number of Segments: <output id="segmentsMainOutput">490</output><br/>
+    V: <input type="range" id="vtRangeMain" min=1 max = 10 value = 10><output for=vtRangeMain id=vtRangeOutput>10</output><br />
+       Q: <input type="range" id="coRangeMain" min=1 max = 10 value = 10><output for=coRangeMain id=coRangeOutput>10</output>
+       <div id="mainSaturation"></div>
+    </fieldset>
+        <fieldset>
+        <legend>Extra Segments</legend>
+    Number of Segments: <input type ="range" id = "segmentsExtra" min= 0 max = 500 value ="0"><output for="segmentsExtra" id="segmentsExtraOutput">0</output><br/>
+    V: <input type="range" id="vtRangeExtra" min=1 max = 10 value = 1><output for=vtRangeExtra id=vtRangeExtraOutput>1</output><br />
+    Q: <input type="range" id="coRangeExtra" min=1 max = 10 value = 1><output for=coRangeExtra id=coRangeExtraOutput>1</output>
+           <div id="extraSaturation"></div>
+    </fieldset>
+</div>
+<div id = "instructions"><fieldset><legend>Instructions</legend>
+<p>You can distribute the perfusion (CO) and ventilation (Vt) of lung segments. You are allowed 500 segments to distribute between 2 populations. Altering the perfusion and ventilation will yield different saturations and CO2 clearances.</p>
+
+<p> Notice how the best saturations are obtained by matching perfusion and ventilation. </p>
+
+<p>Notice how CO2 is mainly affected by ventilation but can also be affected by VQ mismatch. </p>
+</fieldset></div>
+<div id = "legend">
+    <fieldset><legend>Legend</legend>
+    <div class="legendblock" id="legendVQ"></div> VQ<br/>
+    <div class="legendblock" id="legendCO"></div> CO<br/>
+    <div class="legendblock" id="legendVt"></div> Vt<br/>
+    </fieldset>
+</div>
+</body>
+<script src="jquerymini.js"></script>
+<script type = "text/javascript" src = "LookupTables.js"></script>
+<script type = "text/javascript" src = "CalculateLungSegmentOxygen.js"></script>
+<script>
+
+</script>
+</html>

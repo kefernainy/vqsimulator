@@ -1,0 +1,26 @@
+{{1.11111111111 , 1.83673469388},
+{3.33333333333 , 11.7006802721},
+{7.77777777778 , 21.9047619048},
+{12.2222222222 , 27.3469387755},
+{21.1111111111 , 35.8503401361},
+{27.7777777778 , 41.2925170068},
+{33.3333333333 , 45.0340136054},
+{38.1481481481 , 48.0952380952},
+{42.5925925926 , 50.8163265306},
+{52.2222222222 , 54.8979591837},
+{63.3333333333 , 58.6394557823},
+{71.1111111111 , 60.6802721088},
+{77.037037037  ,62.0408163265},
+{80.3703703704 , 62.380952381},
+{16.2962962963 , 31.768707483},
+{3.7037037037  ,13.0612244898},
+{5.92592592593 , 17.8231292517},
+{58.1481481481 , 57.2789115646}}
+
+
+for CO2
+calculate pressure of CO2 in the blood
+decrease pressure by 1mm
+calculate how many cc of CO2 that is
+how much pressure in the segment does that amount of CO2 make (pressure of gas multiplied by volume of CO2/total volume(vt))(40mm*5cc/10cc == 20mm)
+if the pressure in the segment is the same as that in the blood then equilibrium has been reached
